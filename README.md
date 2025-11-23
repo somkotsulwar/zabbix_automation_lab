@@ -1,10 +1,10 @@
-#### zabbix_automation_lab
+### Repo zabbix_automation_lab used for auto deploy agent and other objects in zabbix
 
 #### Zabbix Agent — Ansible Role
 
 Deploy and configure **Zabbix Agent** on Linux hosts.
 
-### Features
+#### Features
 
 - Installs **zabbix-agent**
 - Configures `Server` and `ServerActive`
