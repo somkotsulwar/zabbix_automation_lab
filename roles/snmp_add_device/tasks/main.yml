@@ -1,0 +1,23 @@
+---
+- name: Load SNMP device list
+  include_vars:
+    file: "{{ device_file }}"
+
+- name: Add SNMP devices to Zabbix
+  community.zabbix.zabbix_host:
+    server_url: "{{ zabbix_url }}"
+    login_user: "{{ zabbix_username }}"
+    login_password: "{{ zabbix_password }}"
+    host_name: "{{ item.name }}"
+    host_groups:
+      - "Network Devices"
+    interfaces:
+      - type: 2          # SNMP
+        ip: "{{ item.ip }}"
+        port: "{{ item.port }}"
+        details:
+          version: 2     
+    templates:
+      - "Template Net SNMP"
+    state: present
+  loop: "{{ snmp_devices }}"
