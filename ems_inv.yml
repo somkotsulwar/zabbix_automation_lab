@@ -1,0 +1,8 @@
+# This is inventory file 
+[zabbix_agents]
+node01
+node02
+
+[postgresdb]
+ems_pg01
+ems_pg02
