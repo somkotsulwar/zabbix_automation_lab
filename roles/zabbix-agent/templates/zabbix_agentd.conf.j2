@@ -1,9 +1,8 @@
 ##############################
 #  Zabbix Agent Configuration
 ##############################
-
-Server={{ zabbix_server_list }}
-ServerActive={{ zabbix_server_list }}
+Server={{ zabbix_ha_nodes | join(',') }}
+ServerActive={{ zabbix_ha_nodes | join(';') }}
 Hostname={{ inventory_hostname }}
 LogFile=/var/log/zabbix/zabbix_agentd.log
 LogFileSize=0
