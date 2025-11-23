@@ -1,16 +1,16 @@
-### zabbix_automation_lab
+#### zabbix_automation_lab
 
-### Zabbix Agent — Ansible Role
+#### Zabbix Agent — Ansible Role
 
 Deploy and configure **Zabbix Agent** on Linux hosts.
 
-## Features
+### Features
 
 - Installs **zabbix-agent**
 - Configures `Server` and `ServerActive`
 - One liner execution.
 
-## Installation steps.
+### Installation steps.
 #### Step1: Clone the repository
 git clone https://github.com/somkotsulwar/zabbix_automation_lab.git
 
