@@ -51,4 +51,3 @@ You should see:
 
 - Green **ZBX** availability
 - Items and metrics latest data updating
-######################################################################
