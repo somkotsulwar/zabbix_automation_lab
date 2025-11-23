@@ -1,0 +1,10 @@
+##############################
+#  Zabbix Agent Configuration
+##############################
+
+Server={{ zabbix_server_list }}
+ServerActive={{ zabbix_server_list }}
+Hostname={{ inventory_hostname }}
+LogFile=/var/log/zabbix/zabbix_agentd.log
+LogFileSize=0
+Include=/etc/zabbix/zabbix_agentd.d/*.conf
