@@ -13,6 +13,7 @@ Deploy and configure **Zabbix Agent** on Linux hosts.
 ## Installation steps.
 #### Step1: Clone the repository
 git clone https://github.com/somkotsulwar/zabbix_automation_lab.git
+
 cd zabbix_automation_lab
 
 #### Step 2: Update the inventory
