@@ -1,7 +1,7 @@
 ## This is main playbook.
 # ansible-playbook -i ems_inv.yml install_agent.yml 
 - name: Deploy Zabbix Agent on remote hosts
-  hosts: all
+  hosts: zabbix_agents
   become: yes
 
   roles:
