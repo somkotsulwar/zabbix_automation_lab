@@ -1,5 +1,5 @@
 ---
-# RedHat + Rocky + AlmaLinux + CentOS
+# This playbook works on OS RedHat/Rocky/CentOS
 
 - name: Install Zabbix repository (RedHat family)
   dnf:
