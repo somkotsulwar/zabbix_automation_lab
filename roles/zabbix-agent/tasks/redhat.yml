@@ -6,8 +6,11 @@
   dnf:
     name: "https://repo.zabbix.com/zabbix/7.4/rhel/{{ ansible_facts.distribution_major_version }}/noarch/zabbix-release-latest-7.4.el{{ ansible_facts.distribution_major_version }}.noarch.rpm"
     state: present
-
+  tags: 
+    - redhat
+    
 - name: Install Zabbix Agent
+  become: true
   dnf:
     name: "{{ zabbix_agent_package }}"
     state: present
