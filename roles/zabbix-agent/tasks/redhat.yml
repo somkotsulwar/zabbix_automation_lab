@@ -2,6 +2,7 @@
 # This playbook works on OS RedHat/Rocky/CentOS
 
 - name: Install Zabbix repository (RedHat family)
+  become: true
   dnf:
     name: "https://repo.zabbix.com/zabbix/7.4/rhel/{{ ansible_facts.distribution_major_version }}/noarch/zabbix-release-latest-7.4.el{{ ansible_facts.distribution_major_version }}.noarch.rpm"
     state: present
