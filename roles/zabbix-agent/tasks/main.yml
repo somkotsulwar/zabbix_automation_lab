@@ -1,11 +1,11 @@
 ---
-- name: Install Zabbix Agent - RedHat family
+- name: Install Zabbix Agent - RedHat 
   include_tasks: redhat.yml
   when: ansible_facts.os_family == "RedHat"
 
-- name: Install Zabbix Agent - Debian family
-  include_tasks: debian.yml
-  when: ansible_facts.os_family == "Debian"
+- name: Install Zabbix Agent - Ubuntu 
+  include_tasks: ubuntu.yml
+  when: ansible_facts.os_family == "Ubuntu"
   
 - name: Deploy Zabbix Agent configuration
   template:
