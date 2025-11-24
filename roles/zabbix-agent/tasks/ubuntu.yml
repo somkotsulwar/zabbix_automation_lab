@@ -2,11 +2,14 @@
 # This works on OS Ubuntu
 
 - name: Download Zabbix release package for Ubuntu
+  become: true
   get_url:
     url: "https://repo.zabbix.com/zabbix/7.4/release/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_7.4+ubuntu{{ ansible_facts.distribution_major_version }}.04_all.deb"
     dest: /tmp/zabbix-release.deb
     mode: '0644'
-
+  tags:
+    - ubuntu
+    
 - name: Install Zabbix release package
   dpkg:
     deb: /tmp/zabbix-release.deb
